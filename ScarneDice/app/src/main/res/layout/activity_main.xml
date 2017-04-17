@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.csulb.scarnedice.MainActivity">
+
+    <TextView
+        android:id="@+id/your_score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Score: 0"
+        android:layout_alignBaseline="@+id/cpu_score_text"
+        android:layout_alignBottom="@+id/cpu_score_text"
+        android:layout_alignStart="@+id/your_turn_text" />
+
+    <TextView
+        android:id="@+id/cpu_score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Score: 0"
+        android:layout_below="@+id/cpu_status_text"
+        android:layout_alignEnd="@+id/reset_btn"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/dice_image"
+        android:layout_width="178dp"
+        android:layout_height="168dp"
+        app:srcCompat="@drawable/dice1"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/your_score_text"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/roll_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll"
+        android:onClick="onClick"
+        android:layout_alignBaseline="@+id/hold_btn"
+        android:layout_alignBottom="@+id/hold_btn"
+        android:layout_toStartOf="@+id/dice_image" />
+
+    <Button
+        android:id="@+id/hold_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hold"
+        android:onClick="onClick"
+        android:layout_alignBaseline="@+id/reset_btn"
+        android:layout_alignBottom="@+id/reset_btn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:onClick="onClick"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/dice_image"
+        android:layout_toEndOf="@+id/dice_image" />
+
+    <TextView
+        android:id="@+id/your_turn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Turn: 0"
+        android:layout_alignBaseline="@+id/cpu_turn_text"
+        android:layout_alignBottom="@+id/cpu_turn_text"
+        android:layout_toStartOf="@+id/dice_image" />
+
+    <TextView
+        android:id="@+id/cpu_turn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Turn: 0"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/cpu_score_text"
+        android:layout_alignStart="@+id/cpu_score_text" />
+
+    <TextView
+        android:id="@+id/cpu_status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@id/cpu_score_text"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>
